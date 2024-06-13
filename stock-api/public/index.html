@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Trades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Trades</h1>
+        <div class="trade-form">
+            <h2>Add Trade</h2>
+            <form id="tradeForm">
+                <label for="type">Type:</label>
+                <select id="type" required>
+                    <option value="buy">Buy</option>
+                    <option value="sell">Sell</option>
+                </select>
+
+                <label for="userId">User ID:</label>
+                <input type="number" id="userId" required>
+
+                <label for="symbol">Symbol:</label>
+                <input type="text" id="symbol" required>
+
+                <label for="shares">Shares:</label>
+                <input type="number" id="shares" min="10" max="30" required>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" required>
+
+                <button type="submit">Add Trade</button>
+            </form>
+        </div>
+        <div class="trade-list">
+            <h2>Trades</h2>
+            <ul id="tradesList"></ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
